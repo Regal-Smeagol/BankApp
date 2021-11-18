@@ -1,9 +1,10 @@
 from abc import abstractmethod, ABC
 
-Class Bank_System(ABC):
+
+class BankSystem(ABC):
 
     @abstractmethod
-    def create_account(self, account_details: str) -> account: Account:
+    def create_account(self, account_details: str):
         pass
 
     @abstractmethod
@@ -54,10 +55,10 @@ Class Bank_System(ABC):
     def retrieve_list_of_accounts(self):
         pass
 
-
     @abstractmethod
     def retrieve_list_of_accounts_by_cust_id(self):
         pass
+
 
 """
     class Customer():

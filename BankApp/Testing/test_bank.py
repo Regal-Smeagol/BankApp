@@ -1,6 +1,4 @@
-from BankApp.Release.bank import bank_system
+from BankApp.Release.bank import BankSystem
 
 
-Bank_System = bank_system()
-
-Bank_System.
+Bank_System = BankSystem()
