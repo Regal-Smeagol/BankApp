@@ -1,57 +1,75 @@
-print("hello world")
+from abc import abstractmethod, ABC
 
-def create_account():
-    pass
+Class Bank_System(ABC):
 
-def get_account_by_id():
-    pass
+    @abstractmethod
+    def create_account(self, account_details: str) -> account: Account:
+        pass
 
-def deposit():
-    pass
+    @abstractmethod
+    def get_account_by_id(self, id_number: int):
+        pass
 
-def withdraw():
-    pass
+    @abstractmethod
+    def deposit(self, id_number: int, ):
+        pass
 
-def transfer():
-    pass
+    @abstractmethod
+    def withdraw(self):
+        pass
 
-def update_customer_info():
-    pass
+    @abstractmethod
+    def transfer(self):
+        pass
 
-def retrieve_customer_info():
-    pass
+    @abstractmethod
+    def update_customer_info(self):
+        pass
 
-def close_account():
-    pass
+    @abstractmethod
+    def retrieve_customer_info(self):
+        pass
 
-def customer_departure():
-    pass
+    @abstractmethod
+    def close_account(self):
+        pass
 
-def transaction_validation():
-    pass
+    @abstractmethod
+    def customer_departure(self):
+        pass
 
-def add_customer():
-    pass
+    @abstractmethod
+    def transaction_validation(self):
+        pass
 
-def retrieve_list_of_customers():
-    pass
+    @abstractmethod
+    def add_customer(self):
+        pass
 
-def retrieve_list_of_accounts():
-    pass
+    @abstractmethod
+    def retrieve_list_of_customers(self):
+        pass
 
-def retrieve_list_of_accounts_by_cust_id():
-    pass
+    @abstractmethod
+    def retrieve_list_of_accounts(self):
+        pass
 
 
-class Customer():
-    pass
+    @abstractmethod
+    def retrieve_list_of_accounts_by_cust_id(self):
+        pass
 
-class Account():
-    pass
-    # account num
-    # customer ID
-    # Balance
-    # On hold or not
-    # limit
-    # interest rate if any
-    #
+"""
+    class Customer():
+        pass
+
+    class Account():
+        pass
+        # account num
+        # customer ID
+        # Balance
+        # On hold or not
+        # limit
+        # interest rate if any
+        #
+"""
