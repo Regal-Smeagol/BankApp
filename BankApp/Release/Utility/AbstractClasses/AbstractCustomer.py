@@ -1,5 +1,5 @@
 from abc import abstractmethod, ABC
-from BankApp.Release.Utility.Interfaces import AccountInterface
+from ZagreusBank.Release.Utility.AbstractClasses import AbstractAccount
 
 class CustomerInterface(ABC, AccountInterface):
     pass

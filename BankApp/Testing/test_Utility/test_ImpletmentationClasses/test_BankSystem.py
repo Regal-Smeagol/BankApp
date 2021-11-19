@@ -1,7 +1,7 @@
-from BankApp.Release.Utility.Interfaces.BankSystemInterface import BankSystem
+import ZagreusBank.Release.Utility.AbstractClasses.AbstractBankSystem
 
 
-class Bank_Sys_Obj(BankSystem):
+class Bank_Sys_Obj(ZagreusBank.BankSystem):
 
     def __init__(self):
         pass
