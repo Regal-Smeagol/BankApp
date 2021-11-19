@@ -56,6 +56,5 @@ class BankSystem(ABC):
         pass
 
     @abstractmethod
-    def retrieve_list_of_accounts_by_cust_id(self):
+    def retrieve_list_of_accounts_by_customer_id(self):
         pass
-

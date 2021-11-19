@@ -1,4 +1,4 @@
-from BankApp.Release.bank import BankSystem
+from BankApp.Release.Utility.Interfaces.BankSystemInterface import BankSystem
 
 
 class Bank_Sys_Obj(BankSystem):
@@ -45,7 +45,7 @@ class Bank_Sys_Obj(BankSystem):
     def retrieve_list_of_accounts(self):
         pass
 
-    def retrieve_list_of_accounts_by_cust_id(self):
+    def retrieve_list_of_accounts_by_customer_id(self):
         pass
 
 
@@ -54,3 +54,8 @@ bank_obj = Bank_Sys_Obj()
 
 def test_bank():
     assert type(bank_obj) is type(bank_obj)
+
+
+def test_default_tester():
+    print('\n\t* I can do anything with pytest')
+    assert True
