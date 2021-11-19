@@ -1,0 +1,3 @@
+todo Reformat file structure to better reflect the 3-Tier Web Application paradigm.
+todo write Interfaces and accompanying tests: AccountInterface, BankSystemInterface, CustomerInterface, t.b.d
+todo write Entities and accompanying tests: Account, BankSystem, CustomerInterface, t.b.d.

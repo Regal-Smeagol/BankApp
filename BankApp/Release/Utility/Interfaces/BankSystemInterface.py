@@ -59,18 +59,3 @@ class BankSystem(ABC):
     def retrieve_list_of_accounts_by_cust_id(self):
         pass
 
-
-"""
-    class Customer():
-        pass
-
-    class Account():
-        pass
-        # account num
-        # customer ID
-        # Balance
-        # On hold or not
-        # limit
-        # interest rate if any
-        #
-"""
