@@ -1,1 +1,1 @@
-import ZagreusBank.Release.API.WebApplication
+from BankApp.Release.API import ZagreusBank

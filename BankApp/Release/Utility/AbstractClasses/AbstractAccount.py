@@ -1,13 +1,16 @@
 from abc import abstractmethod, ABC
 
 
-
-
 class AccountInterface(ABC):
-    pass
-    # account num
-    # customer ID
-    # Balance
-    # On hold or not
-    # limit
-    # interest rate if any
+    # data
+    account_number: int
+    available_balance: float
+    customer_id: int
+    withdraw_limit: float
+    interest_rate: float
+    on_hold: bool # Used for storing whether or not a customer can access their account.
+
+
+    @abstractmethod
+    def on_hold(self):
+        pass
