@@ -9,13 +9,13 @@ class dao_Account(ABC, Account):
         pass
 
     @abstractmethod
-    def deposit(self, id_number: int, ):
+    def update_balance(self, account_number: int, updated_balance: float):
         pass
 
     @abstractmethod
-    def withdraw(self):
+    def withdraw(self, account_number: int, withdraw_amount: float):
         pass
 
     @abstractmethod
-    def close_account(self):
+    def close_account(self, account_number: int):
         pass

@@ -1,10 +1,33 @@
-from abc import ABC  # Remove this later
+class Account:
+    """Class Variables"""
+    total_active_accounts: int = 0
+    accounts_on_record: int = 0
 
-
-class Account(ABC):
-
-    def __init__(self):
-        pass
+    def __init__(self, account_data):
+        self.account_id: int = self.account_id_generator()
+        self.balance: float = 0.00
 
     def __str__(self):
-        return "first name: {}, last name: {}, jersey number: {}, player ID: {}, team ID: {}".format(self.first_name, self.last_name, self.cust)
+        return f"Account ID: {self.account_id}, "
+
+    """Class Utilities"""
+
+    @classmethod
+    def increment_accounts_on_record(cls):
+        cls.accounts_on_record += 1
+
+    @classmethod
+    def increment_active_accounts(cls):
+        cls.total_active_accounts += 1
+
+    @classmethod
+    def decrement_accounts_on_record(cls):
+        cls.accounts_on_record -= 1
+
+    @classmethod
+    def decrement_active_accounts(cls):
+        cls.total_active_accounts -= 1
+
+    @classmethod
+    def account_id_generator(cls) -> int:
+        return int(cls.accounts_on_record * 22 / 7)
