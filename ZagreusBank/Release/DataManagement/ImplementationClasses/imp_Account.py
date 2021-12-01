@@ -1,10 +1,9 @@
-import ZagreusBank.Release.DataManagement.DataAccessClasses.dao_Account as d_Acc
-# import ZagreusBank.Release.DataManagement.DataAccessClasses.dao_Account
+import ZagreusBank.Release.DataManagement.DataAccessClasses.dao_Account as AccountDataManipulator
 
 
-class imp_Account(d_Acc.dao_Account):
+class imp_Account(AccountDataManipulator.dao_Account):
     account_data = "beans"
-    account = d_Acc.Account(account_data)
+    account = AccountDataManipulator.Account(account_data)
 
     def on_hold(self) -> bool:
         pass
