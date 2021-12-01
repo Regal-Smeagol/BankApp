@@ -1,10 +1,11 @@
 from abc import abstractmethod, ABC
+from BankApp.Release.DataManagement.DataClasses.Account import Account
 
 
-class dao_Account(ABC):
+class dao_Account(ABC, Account):
 
     @abstractmethod
-    def on_hold(self):
+    def on_hold(self) -> bool:
         pass
 
     @abstractmethod

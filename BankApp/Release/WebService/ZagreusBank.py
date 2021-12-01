@@ -1,6 +1,8 @@
+from typing import Optional, Any
+
 from flask import Flask, request, jsonify # Library used for running a microservice used for testing and debugging
 
-from BankApp.BankApp.Release.DataAccess.DataClasses.Customer import Customer
+from BankApp.Release.DataManagement.DataClasses.Customer import Customer
 
 ZagreusBankServer: Flask = Flask(__name__)
 
@@ -10,17 +12,13 @@ def landing_page():
     return "Welcome to Jurassic Park"
 
 
-@ZagreusBankServer.post("/customer")
-def create_customer_record():
-    try:
-        customer_data = request.get_json()
-        new_customer = Customer(
-            customer_data["first_name"],
-            customer_data["last_name"],
-            customer_data["customer_id"]
-        )
-    except ModuleNotFoundError as e:
-        return e
+# @ZagreusBankServer.post("/customer")
+# def create_customer_record():
+#     try:
+#         customer_data = request.get_json()
+#         new_customer = Customer(customer_data)
+#     except DuplicateCustomerException as e:
+#         return e
 
 
 @ZagreusBankServer.get("/customer/<customer_id>")
