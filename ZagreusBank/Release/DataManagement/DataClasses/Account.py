@@ -3,7 +3,7 @@ class Account:
     total_active_accounts: int = 0
     accounts_on_record: int = 0
 
-    def __init__(self, account_data):
+    def __init__(self, account_data) -> object:
         self.account_id: int = self.account_id_generator()
         self.balance: float = 0.00
 

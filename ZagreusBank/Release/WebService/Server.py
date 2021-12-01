@@ -3,16 +3,15 @@ from flask import Flask, request, jsonify  # Code for the server, HTTP requests,
 
 
 """Code for bank management and logical operations"""
-from BankApp.Release.Service.BankSystem import BankSystem
+from ZagreusBank.Release.Service.BankSystem import BankSystem
 
 """Implementation Namespaces"""
-import BankApp.Release.DataManagement.ImplementationClasses.imp_Customer
-import BankApp.Release.DataManagement.ImplementationClasses.imp_Account
+import ZagreusBank.Release.DataManagement.ImplementationClasses as Implementation
 
 
 """Custom Exceptions"""
-from BankApp.Logging_Debugging.CustomExceptions.DuplicateCustomerException import DuplicateCustomerException
-from BankApp.Logging_Debugging.CustomExceptions.DuplicateAccountNumberException import DuplicateAccountNumberException
+from ZagreusBank.Logging_Debugging.CustomExceptions.DuplicateCustomerException import DuplicateCustomerException
+from ZagreusBank.Logging_Debugging.CustomExceptions.DuplicateAccountNumberException import DuplicateAccountNumberException
 
 ZagreusBankServer: Flask = Flask(__name__)
 
@@ -28,7 +27,7 @@ def landing_page():
 def create_customer_record():
     try:
         customer_data = request.get_json()
-        new_customer = imp_Customer.imp_Customer.create_customer_entry()
+        new_customer = Implementation.imp_Customer.imp_Customer.create_customer_entry()
     except DuplicateCustomerException as e:
         json_exception_response = jsonify(dict(message=e))
         return json_exception_response

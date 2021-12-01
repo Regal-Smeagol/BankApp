@@ -1,5 +1,5 @@
-from BankApp.Release.DataManagement.DataAccessClasses.dao_Customer import dao_Customer
-from BankApp.Release.DataManagement.DataClasses.Customer import Customer
+from ZagreusBank.Release.DataManagement.DataAccessClasses.dao_Customer import dao_Customer
+from ZagreusBank.Release.DataManagement.DataClasses.Customer import Customer
 
 
 class imp_Customer(dao_Customer):

@@ -1,5 +1,5 @@
 from abc import abstractmethod, ABC
-from BankApp.Release.DataManagement.DataClasses.Customer import Customer
+from ZagreusBank.Release.DataManagement.DataClasses.Customer import Customer
 
 
 class dao_Customer(ABC, Customer):
@@ -27,4 +27,3 @@ class dao_Customer(ABC, Customer):
     @abstractmethod
     def delete_customer_information(self, customer_id: int) -> bool:
         pass
-

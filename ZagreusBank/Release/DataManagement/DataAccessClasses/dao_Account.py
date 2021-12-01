@@ -1,5 +1,5 @@
 from abc import abstractmethod, ABC
-from BankApp.Release.DataManagement.DataClasses.Account import Account
+from ZagreusBank.Release.DataManagement.DataClasses.Account import Account
 
 
 class dao_Account(ABC, Account):
