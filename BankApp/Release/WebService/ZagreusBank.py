@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify # Library used for running a microservice used for testing and debugging
 
-from BankApp.BankApp.Release.Util.ImplementationClasses.Customer import Customer
+from BankApp.BankApp.Release.DataAccess.DataClasses.Customer import Customer
 
 ZagreusBankServer: Flask = Flask(__name__)
 
