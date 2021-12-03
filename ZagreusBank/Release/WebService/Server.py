@@ -10,7 +10,8 @@ from ZagreusBank.Release.DataManagement.ImplementationClasses.imp_Account import
 
 """Custom Exceptions"""
 from ZagreusBank.Logging_Debugging.CustomExceptions.DuplicateCustomerException import DuplicateCustomerException
-from ZagreusBank.Logging_Debugging.CustomExceptions.DuplicateAccountNumberException import DuplicateAccountNumberException
+from ZagreusBank.Logging_Debugging.CustomExceptions.DuplicateAccountNumberException import \
+    DuplicateAccountNumberException
 
 ZagreusWebServer: Flask = Flask(__name__)
 
@@ -20,6 +21,11 @@ BankSystem()
 @ZagreusWebServer.get("/")
 def landing_page():
     return "Welcome to Zagreus Bank"
+
+
+@ZagreusWebServer.get("customer/all")
+def return_all_customer_information():
+    imp_Customer.get_all_customer_information()
 
 
 @ZagreusWebServer.get("/customer/new")
@@ -36,6 +42,17 @@ def create_customer_record():
 def return_customer_information(customer_id: str):
     json_customer_info = jsonify(int(customer_id))
     return json_customer_info
+
+
+@ZagreusWebServer.get("/account/<account_id>")
+def return_account_information(account_id: str):
+    json_account_info = jsonify((int(account_id)))
+    return json_account_info
+
+
+@ZagreusWebServer.post("/customer/<customer_id>/account/new")
+def make_account_for_customer_id(customer_id: str):
+    imp_Customer.get_customer_information(int(customer_id))
 
 
 ZagreusWebServer.run()
