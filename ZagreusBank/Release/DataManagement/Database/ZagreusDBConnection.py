@@ -1,7 +1,6 @@
 from ZagreusBank.Secrets.database_connection_config import credentials
 from psycopg import connect, OperationalError
-import secrets
-secrets.
+
 
 
 def establish_connection():
