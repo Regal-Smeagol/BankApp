@@ -1,5 +1,9 @@
-"""Zagreus Bank: Gold is old! Crypto is hip, bro!!!"""
-from flask import Flask, request, jsonify  # Code for the server, HTTP requests, and parsing data, respectively
+"""Code for the server, HTTP requests, and parsing data, respectively"""
+from flask import Flask, request, jsonify
+
+"""Code for logging"""
+import logging
+logging.basicConfig(filename="records.log", level=logging.DEBUG, format=f"%(asctime)s %(levelname)s %(message)s")
 
 """Code for bank management and logical operations"""
 from ZagreusBank.Release.Service.BankSystem import BankSystem
@@ -10,8 +14,7 @@ from ZagreusBank.Release.DataManagement.ImplementationClasses.imp_Account import
 
 """Custom Exceptions"""
 from ZagreusBank.Logging_Debugging.CustomExceptions.DuplicateCustomerException import DuplicateCustomerException
-from ZagreusBank.Logging_Debugging.CustomExceptions.DuplicateAccountNumberException import \
-    DuplicateAccountNumberException
+from ZagreusBank.Logging_Debugging.CustomExceptions.DuplicateAccountNumberException import DuplicateAccountNumberException
 
 ZagreusWebServer: Flask = Flask(__name__)
 
