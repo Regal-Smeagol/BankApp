@@ -16,6 +16,6 @@ def establish_connection():
         print(str(e))
 
 
-connection_obj = establish_connection()
+database_connection_object = establish_connection()
 
-print(connection_obj)
+print(database_connection_object)

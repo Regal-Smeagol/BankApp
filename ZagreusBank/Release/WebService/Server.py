@@ -55,7 +55,7 @@ def return_account_information(account_id: str):
     return json_account_info
 
 
-@ZagreusWebServer.post("/customer/<customer_id>/account/new")
+@ZagreusWebServer.post("account/new/<customer_id>")
 def make_account_for_customer_id(customer_id: str):
     imp_Customer.get_customer_information(int(customer_id))
 
