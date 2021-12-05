@@ -50,7 +50,7 @@ class postgres_Account(DAL.dao_Account):
     def get_accounts_by_customer_id(self, customer_id: int) -> List[DAL.Account]:
         get_all_accounts_request = "select * from account where customer_id = %s"
         sql_request_handler = db_connection.cursor()
-        sql_request_handler.execute(get_all_accounts_request, customer_id)
+        sql_request_handler.execute(get_all_accounts_request, [customer_id])
         db_connection.execute()
         account_data = sql_request_handler.fetchall()
         accounts = []
