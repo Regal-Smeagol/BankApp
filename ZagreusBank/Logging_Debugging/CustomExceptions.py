@@ -1,12 +1,12 @@
 from psycopg.errors import ForeignKeyViolation, InFailedSqlTransaction
 
 
-class DuplicateAccountException(Exception):
+class DuplicateAccountNumberException(Exception):
     def __init__(self, message: str):
         self.message = message
 
 
-class DuplicateCustomerException(Exception):
+class DuplicateCustomerNumberException(Exception):
     def __init__(self, message: str):
         self.message = message
 
@@ -27,5 +27,10 @@ class AccountCreationException(Exception):
 
 
 class AccountDoesNotExistException(Exception):
+    def __init__(self, message: str):
+        self.message = message
+
+
+class UpdateAccountException(Exception):
     def __init__(self, message: str):
         self.message = message

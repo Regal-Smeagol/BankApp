@@ -1,6 +1,10 @@
 """Code for the server, HTTP requests, and parsing data, respectively"""
 from flask import Flask, request, jsonify
 
+"""Data Classes"""
+from ZagreusBank.Release.DataManagement.DataClasses.Account import Account
+from ZagreusBank.Release.DataManagement.DataClasses.Customer import Customer
+
 """Code for logging"""
 import logging
 logging.basicConfig(filename="records.log", level=logging.DEBUG, format=f"%(asctime)s %(levelname)s %(message)s")
@@ -15,8 +19,8 @@ from ZagreusBank.Release.Service.BankSystem import BankSystem
 
 
 """Custom Exceptions"""
-from ZagreusBank.Logging_Debugging.CustomExceptions.DuplicateCustomerException import DuplicateCustomerException
-from ZagreusBank.Logging_Debugging.CustomExceptions.DuplicateAccountNumberException import DuplicateAccountNumberException
+#from ZagreusBank.Logging_Debugging.CustomExceptions.DuplicateCustomerException import DuplicateCustomerException
+#from ZagreusBank.Logging_Debugging.CustomExceptions.DuplicateAccountNumberException import DuplicateAccountNumberException
 
 ZagreusWebServer: Flask = Flask(__name__)
 
@@ -37,7 +41,8 @@ def return_all_customer_information():
 def create_customer_record():
     try:
         customer_data = request.get_json()
-        new_customer = imp_Customer.create_customer_entry(customer_data)
+        new_customer = Account(**customer_data)
+        created_customer =
     except DuplicateCustomerException as e:
         json_exception_response = jsonify(dict(message=e))
         return json_exception_response
@@ -58,6 +63,9 @@ def return_account_information(account_id: str):
 @ZagreusWebServer.post("account/new/<customer_id>")
 def make_account_for_customer_id(customer_id: str):
     imp_Customer.get_customer_information(int(customer_id))
+
+@ZagreusWebServer.post("transfer/<sending_account_id>/<receiving_account_id>")
+def balance_transfer:
 
 
 ZagreusWebServer.run()

@@ -9,5 +9,5 @@ class Account:
     def __str__(self):
         return f"Account ID: {self.account_id}\nCustomer ID: {self.customer_id}\nBalance: {self.balance}\nHOLD: {self.is_on_hold}"
 
-    def __dict__(self):
+    def make_account_dictionary(self):
         return dict(account_id=self.account_id, customer_id=self.customer_id, balance=self.balance, is_on_hold=self.is_on_hold)
