@@ -1,1 +1,342 @@
 2021-12-06 18:18:48,379 INFO  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-07 09:48:52,765 INFO  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-07 10:17:49,296 INFO  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-07 10:18:33,363 INFO 127.0.0.1 - - [07/Dec/2021 10:18:33] "[33mGET / HTTP/1.1[0m" 404 -
+2021-12-07 10:18:33,597 INFO 127.0.0.1 - - [07/Dec/2021 10:18:33] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-12-07 10:19:09,098 INFO 127.0.0.1 - - [07/Dec/2021 10:19:09] "GET /account/all HTTP/1.1" 200 -
+2021-12-07 10:20:20,893 INFO 127.0.0.1 - - [07/Dec/2021 10:20:20] "GET /account/all HTTP/1.1" 200 -
+2021-12-07 10:21:24,718 INFO 127.0.0.1 - - [07/Dec/2021 10:21:24] "GET /customer/all HTTP/1.1" 200 -
+2021-12-07 10:27:16,078 INFO 127.0.0.1 - - [07/Dec/2021 10:27:16] "GET /customer/all HTTP/1.1" 200 -
+2021-12-07 10:27:24,724 INFO  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-07 10:27:27,803 INFO 127.0.0.1 - - [07/Dec/2021 10:27:27] "GET /customer/all HTTP/1.1" 200 -
+2021-12-07 10:28:35,502 ERROR Exception on /account/<account_it> [GET]
+Traceback (most recent call last):
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\russe\Desktop\Work\Projects\Project0\ZagreusBank\Version2\main.py", line 51, in get_account_information
+    result = account_service.service_get_account_information(int(account_id))
+ValueError: invalid literal for int() with base 10: '<account_it>'
+2021-12-07 10:28:35,523 INFO 127.0.0.1 - - [07/Dec/2021 10:28:35] "[35m[1mGET /account/%3Caccount_it%3E HTTP/1.1[0m" 500 -
+2021-12-07 10:28:45,188 ERROR Exception on /account/<account_id> [GET]
+Traceback (most recent call last):
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\russe\Desktop\Work\Projects\Project0\ZagreusBank\Version2\main.py", line 51, in get_account_information
+    result = account_service.service_get_account_information(int(account_id))
+ValueError: invalid literal for int() with base 10: '<account_id>'
+2021-12-07 10:28:45,189 INFO 127.0.0.1 - - [07/Dec/2021 10:28:45] "[35m[1mGET /account/%3Caccount_id%3E HTTP/1.1[0m" 500 -
+2021-12-07 10:28:51,124 ERROR Exception on /account/account_id [GET]
+Traceback (most recent call last):
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\russe\Desktop\Work\Projects\Project0\ZagreusBank\Version2\main.py", line 51, in get_account_information
+    result = account_service.service_get_account_information(int(account_id))
+ValueError: invalid literal for int() with base 10: 'account_id'
+2021-12-07 10:28:51,125 INFO 127.0.0.1 - - [07/Dec/2021 10:28:51] "[35m[1mGET /account/account_id HTTP/1.1[0m" 500 -
+2021-12-07 10:29:09,099 INFO 127.0.0.1 - - [07/Dec/2021 10:29:09] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-12-07 10:29:58,222 ERROR Exception on /account/account_id=1 [GET]
+Traceback (most recent call last):
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\russe\Desktop\Work\Projects\Project0\ZagreusBank\Version2\main.py", line 51, in get_account_information
+    result = account_service.service_get_account_information(int(account_id))
+ValueError: invalid literal for int() with base 10: 'account_id=1'
+2021-12-07 10:29:58,223 INFO 127.0.0.1 - - [07/Dec/2021 10:29:58] "[35m[1mGET /account/account_id=1 HTTP/1.1[0m" 500 -
+2021-12-07 10:30:40,740 ERROR Exception on /account/7 [GET]
+Traceback (most recent call last):
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\russe\Desktop\Work\Projects\Project0\ZagreusBank\Version2\main.py", line 51, in get_account_information
+    result = account_service.service_get_account_information(int(account_id))
+  File "C:\Users\russe\Desktop\Work\Projects\Project0\ZagreusBank\Version2\service_layer\implementation_services\Account_postgres_service.py", line 21, in service_get_account_information
+    return self.account_dao.get_account_information(account_id)
+  File "C:\Users\russe\Desktop\Work\Projects\Project0\ZagreusBank\Version2\data_access_layer\implementation_classes\Account_postgres_dao.py", line 23, in get_account_information
+    account = Account(*account_record)
+TypeError: ZagreusBank.Version2.entities.Account.Account() argument after * must be an iterable, not NoneType
+2021-12-07 10:30:40,742 INFO 127.0.0.1 - - [07/Dec/2021 10:30:40] "[35m[1mGET /account/7 HTTP/1.1[0m" 500 -
+2021-12-07 10:30:43,897 INFO 127.0.0.1 - - [07/Dec/2021 10:30:43] "GET /account/1 HTTP/1.1" 200 -
+2021-12-07 10:31:20,829 INFO 127.0.0.1 - - [07/Dec/2021 10:31:20] "GET /customer/1 HTTP/1.1" 200 -
+2021-12-07 10:33:07,392 ERROR Exception on /customer/1 [DELETE]
+Traceback (most recent call last):
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\russe\Desktop\Work\Projects\Project0\ZagreusBank\Version2\main.py", line 132, in delete_customer
+    result = customer_service.service_delete_customer_information(int(customer_id))
+  File "C:\Users\russe\Desktop\Work\Projects\Project0\ZagreusBank\Version2\service_layer\implementation_services\Customer_service_imp.py", line 35, in service_delete_customer_information
+    return self.customer_dao.delete_customer_information(customer_id)
+  File "C:\Users\russe\Desktop\Work\Projects\Project0\ZagreusBank\Version2\data_access_layer\implementation_classes\Customer_postgres_dao.py", line 44, in delete_customer_information
+    sql_request_handler.execute(sql, [customer_id])
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\psycopg\cursor.py", line 564, in execute
+    raise ex.with_traceback(None)
+psycopg.errors.ForeignKeyViolation: update or delete on table "customer" violates foreign key constraint "account_customer_id_fkey" on table "account"
+DETAIL:  Key (customer_id)=(1) is still referenced from table "account".
+2021-12-07 10:33:07,395 INFO 127.0.0.1 - - [07/Dec/2021 10:33:07] "[35m[1mDELETE /customer/1 HTTP/1.1[0m" 500 -
+2021-12-07 10:34:31,104 ERROR Exception on /customer/1 [DELETE]
+Traceback (most recent call last):
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\russe\Desktop\Work\Projects\Project0\ZagreusBank\Version2\main.py", line 132, in delete_customer
+    result = customer_service.service_delete_customer_information(int(customer_id))
+  File "C:\Users\russe\Desktop\Work\Projects\Project0\ZagreusBank\Version2\service_layer\implementation_services\Customer_service_imp.py", line 35, in service_delete_customer_information
+    return self.customer_dao.delete_customer_information(customer_id)
+  File "C:\Users\russe\Desktop\Work\Projects\Project0\ZagreusBank\Version2\data_access_layer\implementation_classes\Customer_postgres_dao.py", line 44, in delete_customer_information
+    sql_request_handler.execute(sql, [customer_id])
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\psycopg\cursor.py", line 564, in execute
+    raise ex.with_traceback(None)
+psycopg.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+2021-12-07 10:34:31,106 INFO 127.0.0.1 - - [07/Dec/2021 10:34:31] "[35m[1mDELETE /customer/1 HTTP/1.1[0m" 500 -
+2021-12-07 10:34:37,745 ERROR Exception on /customer/2 [DELETE]
+Traceback (most recent call last):
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\russe\Desktop\Work\Projects\Project0\ZagreusBank\Version2\main.py", line 132, in delete_customer
+    result = customer_service.service_delete_customer_information(int(customer_id))
+  File "C:\Users\russe\Desktop\Work\Projects\Project0\ZagreusBank\Version2\service_layer\implementation_services\Customer_service_imp.py", line 35, in service_delete_customer_information
+    return self.customer_dao.delete_customer_information(customer_id)
+  File "C:\Users\russe\Desktop\Work\Projects\Project0\ZagreusBank\Version2\data_access_layer\implementation_classes\Customer_postgres_dao.py", line 44, in delete_customer_information
+    sql_request_handler.execute(sql, [customer_id])
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\psycopg\cursor.py", line 564, in execute
+    raise ex.with_traceback(None)
+psycopg.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+2021-12-07 10:34:37,746 INFO 127.0.0.1 - - [07/Dec/2021 10:34:37] "[35m[1mDELETE /customer/2 HTTP/1.1[0m" 500 -
+2021-12-07 10:34:54,359 INFO  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-07 10:35:16,704 ERROR Exception on /customer/delete/1 [DELETE]
+Traceback (most recent call last):
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\russe\Desktop\Work\Projects\Project0\ZagreusBank\Version2\main.py", line 132, in delete_customer
+    result = customer_service.service_delete_customer_information(int(customer_id))
+  File "C:\Users\russe\Desktop\Work\Projects\Project0\ZagreusBank\Version2\service_layer\implementation_services\Customer_service_imp.py", line 35, in service_delete_customer_information
+    return self.customer_dao.delete_customer_information(customer_id)
+  File "C:\Users\russe\Desktop\Work\Projects\Project0\ZagreusBank\Version2\data_access_layer\implementation_classes\Customer_postgres_dao.py", line 44, in delete_customer_information
+    sql_request_handler.execute(sql, [customer_id])
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\psycopg\cursor.py", line 564, in execute
+    raise ex.with_traceback(None)
+psycopg.errors.ForeignKeyViolation: update or delete on table "customer" violates foreign key constraint "account_customer_id_fkey" on table "account"
+DETAIL:  Key (customer_id)=(1) is still referenced from table "account".
+2021-12-07 10:35:16,708 INFO 127.0.0.1 - - [07/Dec/2021 10:35:16] "[35m[1mDELETE /customer/delete/1 HTTP/1.1[0m" 500 -
+2021-12-07 10:41:07,367 INFO  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-07 10:41:11,020 INFO 127.0.0.1 - - [07/Dec/2021 10:41:11] "DELETE /account/delete/1 HTTP/1.1" 200 -
+2021-12-07 10:41:20,270 INFO 127.0.0.1 - - [07/Dec/2021 10:41:20] "GET /account/all HTTP/1.1" 200 -
+2021-12-07 10:43:52,502 ERROR Exception on /account/new [POST]
+Traceback (most recent call last):
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\russe\Desktop\Work\Projects\Project0\ZagreusBank\Version2\main.py", line 38, in create_account_entry
+    account_to_return = account_service.service_create_account_entry(new_account)
+  File "C:\Users\russe\Desktop\Work\Projects\Project0\ZagreusBank\Version2\service_layer\implementation_services\Account_postgres_service.py", line 16, in service_create_account_entry
+    raise errors.DuplicateAccountNumberException("Account already exists")
+ZagreusBank.Version2.custom_exceptions.DuplicateAccountNumberException: Account already exists
+2021-12-07 10:43:52,504 INFO 127.0.0.1 - - [07/Dec/2021 10:43:52] "[35m[1mPOST /account/new HTTP/1.1[0m" 500 -
+2021-12-07 10:45:36,941 INFO 127.0.0.1 - - [07/Dec/2021 10:45:36] "[31m[1mPOST /account/new$ HTTP/1.1[0m" 405 -
+2021-12-07 10:46:05,615 INFO 127.0.0.1 - - [07/Dec/2021 10:46:05] "[31m[1mPOST /account/new$ HTTP/1.1[0m" 405 -
+2021-12-07 10:46:10,361 INFO  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-07 10:46:10,820 ERROR Exception on /account/new$ [POST]
+Traceback (most recent call last):
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+TypeError: create_account_entry() got an unexpected keyword argument 'account_data'
+2021-12-07 10:46:10,823 INFO 127.0.0.1 - - [07/Dec/2021 10:46:10] "[35m[1mPOST /account/new$ HTTP/1.1[0m" 500 -
+2021-12-07 10:46:41,221 ERROR Exception on /account/new$ [POST]
+Traceback (most recent call last):
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+TypeError: create_account_entry() got an unexpected keyword argument 'account_data'
+2021-12-07 10:46:41,222 INFO 127.0.0.1 - - [07/Dec/2021 10:46:41] "[35m[1mPOST /account/new$?account_data=body HTTP/1.1[0m" 500 -
+2021-12-07 10:48:13,085 ERROR Exception on /account/new$ [POST]
+Traceback (most recent call last):
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+TypeError: create_account_entry() got an unexpected keyword argument 'account_data'
+2021-12-07 10:48:13,086 INFO 127.0.0.1 - - [07/Dec/2021 10:48:13] "[35m[1mPOST /account/new$ HTTP/1.1[0m" 500 -
+2021-12-07 10:48:33,365 INFO 127.0.0.1 - - [07/Dec/2021 10:48:33] "[31m[1mPOST /account/new HTTP/1.1[0m" 405 -
+2021-12-07 10:49:06,589 INFO 127.0.0.1 - - [07/Dec/2021 10:49:06] "[31m[1mPOST /account/new HTTP/1.1[0m" 405 -
+2021-12-07 10:49:33,706 INFO 127.0.0.1 - - [07/Dec/2021 10:49:33] "[31m[1mPOST /account/new HTTP/1.1[0m" 405 -
+2021-12-07 10:50:01,180 INFO 127.0.0.1 - - [07/Dec/2021 10:50:01] "[33mPOST /account/new/$ HTTP/1.1[0m" 404 -
+2021-12-07 10:50:17,384 INFO 127.0.0.1 - - [07/Dec/2021 10:50:17] "[33mPOST /account/new/$ HTTP/1.1[0m" 404 -
+2021-12-07 10:50:23,177 INFO  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-07 10:51:02,479 INFO  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-07 10:51:02,531 ERROR Exception on /account/new/$ [POST]
+Traceback (most recent call last):
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+TypeError: create_account_entry() got an unexpected keyword argument 'account_data'
+2021-12-07 10:51:02,534 INFO 127.0.0.1 - - [07/Dec/2021 10:51:02] "[35m[1mPOST /account/new/$ HTTP/1.1[0m" 500 -
+2021-12-07 10:51:04,262 ERROR Exception on /account/new/$ [POST]
+Traceback (most recent call last):
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+TypeError: create_account_entry() got an unexpected keyword argument 'account_data'
+2021-12-07 10:51:04,263 INFO 127.0.0.1 - - [07/Dec/2021 10:51:04] "[35m[1mPOST /account/new/$ HTTP/1.1[0m" 500 -
+2021-12-07 10:51:34,051 INFO 127.0.0.1 - - [07/Dec/2021 10:51:34] "[31m[1mPOST /account/new HTTP/1.1[0m" 405 -
+2021-12-07 10:53:03,162 INFO 127.0.0.1 - - [07/Dec/2021 10:53:03] "DELETE /customer/delete/1 HTTP/1.1" 200 -
+2021-12-07 10:53:14,949 INFO 127.0.0.1 - - [07/Dec/2021 10:53:14] "DELETE /customer/delete/8 HTTP/1.1" 200 -
+2021-12-07 10:53:20,684 INFO 127.0.0.1 - - [07/Dec/2021 10:53:20] "DELETE /customer/delete/10 HTTP/1.1" 200 -
+2021-12-07 10:53:31,726 INFO 127.0.0.1 - - [07/Dec/2021 10:53:31] "DELETE /customer/delete/17 HTTP/1.1" 200 -
+2021-12-07 10:56:22,981 INFO  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-07 10:56:25,972 INFO 127.0.0.1 - - [07/Dec/2021 10:56:25] "GET /customer/12 HTTP/1.1" 200 -
+2021-12-07 10:58:47,031 INFO  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-07 10:58:51,613 INFO 127.0.0.1 - - [07/Dec/2021 10:58:51] "GET /account/all HTTP/1.1" 200 -
+2021-12-07 10:59:08,601 INFO 127.0.0.1 - - [07/Dec/2021 10:59:08] "GET /customer/all HTTP/1.1" 200 -
+2021-12-07 10:59:50,677 INFO 127.0.0.1 - - [07/Dec/2021 10:59:50] "DELETE /customer/delete/6 HTTP/1.1" 200 -
+2021-12-07 11:00:09,933 INFO 127.0.0.1 - - [07/Dec/2021 11:00:09] "DELETE /customer/delete/10 HTTP/1.1" 200 -
+2021-12-07 11:00:22,756 INFO 127.0.0.1 - - [07/Dec/2021 11:00:22] "DELETE /account/delete/10 HTTP/1.1" 200 -
+2021-12-07 11:00:44,931 INFO 127.0.0.1 - - [07/Dec/2021 11:00:44] "GET /customer/4 HTTP/1.1" 200 -
+2021-12-07 11:00:56,289 ERROR Exception on /account/7 [GET]
+Traceback (most recent call last):
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\russe\Desktop\Work\Projects\Project0\ZagreusBank\Version2\main.py", line 51, in get_account_information
+    result = account_service.service_get_account_information(int(account_id))
+  File "C:\Users\russe\Desktop\Work\Projects\Project0\ZagreusBank\Version2\service_layer\implementation_services\Account_postgres_service.py", line 21, in service_get_account_information
+    return self.account_dao.get_account_information(account_id)
+  File "C:\Users\russe\Desktop\Work\Projects\Project0\ZagreusBank\Version2\data_access_layer\implementation_classes\Account_postgres_dao.py", line 23, in get_account_information
+    account = Account(*account_record)
+TypeError: ZagreusBank.Version2.entities.Account.Account() argument after * must be an iterable, not NoneType
+2021-12-07 11:00:56,293 INFO 127.0.0.1 - - [07/Dec/2021 11:00:56] "[35m[1mGET /account/7 HTTP/1.1[0m" 500 -
+2021-12-07 11:01:13,323 INFO 127.0.0.1 - - [07/Dec/2021 11:01:13] "GET /account/2 HTTP/1.1" 200 -
+2021-12-07 14:17:59,090 INFO  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-12-07 14:18:10,998 ERROR Exception on /account/new [POST]
+Traceback (most recent call last):
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\russe\Desktop\Work\Projects\Project0\ZagreusBank\Version2\main.py", line 38, in create_account_entry
+    account_to_return = account_service.service_create_account_entry(new_account)
+  File "C:\Users\russe\Desktop\Work\Projects\Project0\ZagreusBank\Version2\service_layer\implementation_services\Account_postgres_service.py", line 16, in service_create_account_entry
+    raise errors.DuplicateAccountNumberException("Account already exists")
+ZagreusBank.Version2.custom_exceptions.DuplicateAccountNumberException: Account already exists
+2021-12-07 14:18:11,031 INFO 127.0.0.1 - - [07/Dec/2021 14:18:11] "[35m[1mPOST /account/new HTTP/1.1[0m" 500 -
+2021-12-07 14:20:03,923 ERROR Exception on /account/new [POST]
+Traceback (most recent call last):
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\russe\Desktop\Work\Projects\Project0\ZagreusBank\Version2\main.py", line 38, in create_account_entry
+    account_to_return = account_service.service_create_account_entry(new_account)
+  File "C:\Users\russe\Desktop\Work\Projects\Project0\ZagreusBank\Version2\service_layer\implementation_services\Account_postgres_service.py", line 16, in service_create_account_entry
+    raise errors.DuplicateAccountNumberException("Account already exists")
+ZagreusBank.Version2.custom_exceptions.DuplicateAccountNumberException: Account already exists
+2021-12-07 14:20:03,924 INFO 127.0.0.1 - - [07/Dec/2021 14:20:03] "[35m[1mPOST /account/new HTTP/1.1[0m" 500 -
+2021-12-07 14:20:05,933 ERROR Exception on /account/new [POST]
+Traceback (most recent call last):
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\russe\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\russe\Desktop\Work\Projects\Project0\ZagreusBank\Version2\main.py", line 38, in create_account_entry
+    account_to_return = account_service.service_create_account_entry(new_account)
+  File "C:\Users\russe\Desktop\Work\Projects\Project0\ZagreusBank\Version2\service_layer\implementation_services\Account_postgres_service.py", line 16, in service_create_account_entry
+    raise errors.DuplicateAccountNumberException("Account already exists")
+ZagreusBank.Version2.custom_exceptions.DuplicateAccountNumberException: Account already exists
+2021-12-07 14:20:05,935 INFO 127.0.0.1 - - [07/Dec/2021 14:20:05] "[35m[1mPOST /account/new HTTP/1.1[0m" 500 -

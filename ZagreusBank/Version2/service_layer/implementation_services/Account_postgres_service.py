@@ -13,7 +13,7 @@ class AccountPostgresService(AccountService):
         accounts = self.account_dao.get_all_accounts_information()
         for existing_account in accounts:
             if existing_account.customer_id == account.customer_id:
-                raise errors.DuplicateAccountNumberException("Account number is already taken!")
+                raise errors.DuplicateAccountNumberException("Account already exists")
         created_account = self.account_dao.create_account_entry(account)
         return created_account
 
@@ -29,7 +29,7 @@ class AccountPostgresService(AccountService):
         for current_account in accounts:
             if current_account.customer_id == account.customer_id:
                 if current_account.account_id == account.account_id:
-                    raise errors.DuplicateAccountNumberException("Account number is already taken!")
+                    raise errors.DuplicateAccountNumberException("Account already exists")
         updated_account = self.account_dao.update_account_information(account)
         return updated_account
 

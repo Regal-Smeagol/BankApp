@@ -1,4 +1,0 @@
-todo Reformat file structure to better reflect the 3-Tier Web Application paradigm. In what way does each class relate to this paradigm?
-todo write Interfaces and accompanying tests: dao_Account, BankSystemInterface, dao_Customer, t.b.d
-todo write Entities and accompanying tests: Account, BankSystem, dao_Customer, t.b.d.
-todo Implement flask library in some form or fashion in the API Layer

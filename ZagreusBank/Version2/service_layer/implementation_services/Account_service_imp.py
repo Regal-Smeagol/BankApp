@@ -35,7 +35,7 @@ class AccountServiceImp(AccountService):
         for current_account in self.account_dao.account_list:
             if current_account.customer_id == account.customer_id:
                 if current_account.account_id != account.account_id:
-                    raise errors.DuplicateAccountNumberException("Jersey number is already taken!")
+                    raise errors.DuplicateAccountNumberException("Account already exists")
         return self.account_dao.update_account_information(account)
 
     def service_delete_account_information(self, account_id: int) -> bool:

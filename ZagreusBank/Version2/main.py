@@ -3,13 +3,11 @@ from flask import Flask, request, jsonify
 
 import custom_exceptions as errors
 
-from ZagreusBank.Version2.data_access_layer.implementation_classes.Account_dao_imp import AccountDAOImp
 from ZagreusBank.Version2.data_access_layer.implementation_classes.Account_postgres_dao import AccountPostgresDAO
-from ZagreusBank.Version2.data_access_layer.implementation_classes.Customer_dao_imp import CustomerDAOImp
+from ZagreusBank.Version2.data_access_layer.implementation_classes.Customer_postgres_dao import CustomerPostgresDAO
 from ZagreusBank.Version2.entities.Account import Account
 from ZagreusBank.Version2.entities.Customer import Customer
 from ZagreusBank.Version2.service_layer.implementation_services.Account_postgres_service import AccountPostgresService
-from ZagreusBank.Version2.service_layer.implementation_services.Account_service_imp import AccountServiceImp
 from ZagreusBank.Version2.service_layer.implementation_services.Customer_service_imp import CustomerServiceImp
 import logging
 
@@ -20,7 +18,7 @@ zagreus_bank_server: Flask = Flask(__name__)
 
 account_dao = AccountPostgresDAO()
 account_service = AccountPostgresService(account_dao)
-customer_dao = CustomerDAOImp()
+customer_dao = CustomerPostgresDAO()
 customer_service = CustomerServiceImp(customer_dao)
 
 
@@ -30,10 +28,10 @@ def create_account_entry():
     try:
         account_data = request.get_json()
         new_account = Account(
-            account_data["account_id"],
-            account_data["customer_id"],
+            0,
+            account_data["customerID"],
             account_data["balance"],
-            account_data["on_hold"]
+            account_data["onHold"]
         )
         account_to_return = account_service.service_create_account_entry(new_account)
         account_as_dictionary = account_to_return.make_account_dictionary()
@@ -82,7 +80,7 @@ def update_account_information(account_id: str):
 
 
 # delete account information
-@zagreus_bank_server.delete("/account/<account_id>")
+@zagreus_bank_server.delete("/account/delete/<account_id>")
 def delete_account_information(account_id: str):
     result = account_service.service_delete_account_information(int(account_id))
     if result:
@@ -125,32 +123,18 @@ def get_all_customers():
     return jsonify(customers_as_dictionaries), 200
 
 
-#@zagreus_bank_server.patch("/team/<player_id>")
-# def update_team(player_id: str):
-#     try:
-#         body = request.get_json()
-#         update_info = Team(
-#             body["teamId"],
-#             body["name"]
-#         )
-#         updated_player = team_service.service_update_team_information(update_info)
-#         updated_player_as_dictionary = updated_player.create_team_dictionary()
-#         return jsonify(updated_player_as_dictionary), 200
-#     except DuplicateTeamNameException as e:
-#         error_message = {"errorMessage": str(e)}
-#         return jsonify(error_message)
 
 
-@zagreus_bank_server.delete("/customer/<customer_id>")
+@zagreus_bank_server.delete("/customer/delete/<customer_id>")
 def delete_customer(customer_id: str):
     result = customer_service.service_delete_customer_information(int(customer_id))
     if result:
-        return "Team with id {} was deleted successfully".format(customer_id)
+        return "Customer with id {} was deleted successfully".format(customer_id)
     else:
-        return "Something went wrong: team with id {} was not deleted".format(customer_id)
+        return "Something went wrong: Customer with id {} was not deleted".format(customer_id)
 
-@zagreus_bank_server.post("transfer/<sending_account_id>/<receiving_account_id>/<amount>")
-def balance_transfer(sending_account_id: str, receiving_account_id: str, amount: str):
+#@zagreus_bank_server.post("transfer/<sending_account_id>/<receiving_account_id>/<amount>")
+#def balance_transfer(sending_account_id: str, receiving_account_id: str, amount: str):
 
 
 

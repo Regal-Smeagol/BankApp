@@ -1,13 +1,13 @@
-import BankApp.ZagreusBank.Version2.custom_exceptions as errors
-from BankApp.ZagreusBank.Version2.data_access_layer.implementation_classes.Customer_dao_imp import CustomerDAOImp
-from BankApp.ZagreusBank.Version2.entities.Customer import Customer
-from BankApp.ZagreusBank.Version2.service_layer.implementation_services.Customer_service_imp import CustomerServiceImp
+import ZagreusBank.Version2.custom_exceptions as errors
+from ZagreusBank.Version2.data_access_layer.implementation_classes.Customer_dao_imp import CustomerDAOImp
+from ZagreusBank.Version2.entities.Customer import Customer
+from ZagreusBank.Version2.service_layer.implementation_services.Customer_service_imp import CustomerServiceImp
 
 customer_dao = CustomerDAOImp()
 customer_service = CustomerServiceImp(customer_dao)
 
-bad_customer = Customer(0, "duplicate name")
-bad_update_customer = Customer(1, "duplicate name")
+bad_customer = Customer(0, "duplicate", "name")
+bad_update_customer = Customer(1, "duplicate", "name")
 
 
 def test_catch_creating_customer_with_duplicate_name():
